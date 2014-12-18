@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Google Font OpenType Feature Preview</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .font-selector,
+      .feature-selector {
+        border-bottom: solid 1px black;
+        padding-bottom: 1em;
+      }
+
+      @media screen and (min-width: 40em) {
+        .font-selector,
+        .feature-selector {
+          float: left;
+          width: 50%;
+          border-bottom: none;
+        }
+        .previewer {
+          clear: both;
+          border-top: solid 1px black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+  <form action="#preview" method="GET">
+
+  <h1>Google Font OpenType Feature Preview</h1>
+  <div class="ui">
+
+    <div class="font-selector">
+
+        <summary><h2>Font selector</h2></summary>
+        
+        <h3><label for="fonts">Fonts</label></h3>
+        <select class="fonts" name="fonts" id="fonts">
+          <option value="abril-fatface">Abril Fatface</option>
+          <option value="aclonica">Aclonica</option>
+          <option value="actor">Actor</option>
+          <option value="alice">Alice</option>
+          <option value="allan">Allan</option>
+          <option value="almendra">Almendra</option>
+          <option value="amiri">Amiri</option>
+          <option value="andada">Andada</option>
+          <option value="andika">Andika</option>
+          <option value="arapey">Arapey</option>
+          <option value="arimo">Arimo</option>
+        </select>
+
+        <h3><label for="variants">Variants</label></h3>
+        <select class="variants" name="variants" id="variants">
+          <option value="normal-200">normal 200</option>
+          <option value="italic-200">italic 200</option>
+          <option value="normal-300">normal 300</option>
+          <option value="italic-300">italic 300</option>
+          <option value="normal-400">normal 400</option>
+          <option value="italic-400">italic 400</option>
+          <option value="normal-500">normal 600</option>
+          <option value="italic-500">italic 600</option>
+          <option value="normal-700">normal 700</option>
+          <option value="italic-700">italic 700</option>
+          <option value="normal-900">normal 900</option>
+          <option value="italic-900">italic 900</option>
+        </select>
+
+        <h3>Filter</h3>
+        <ul>
+          <li>
+            <label for="serif">
+              <input type="checkbox" value="serif" id="serif" />
+            Serif
+            </label>
+          </li>
+          <li>
+            <label for="sans-serif">
+              <input type="checkbox" value="sans-serif" id="sans-serif" />
+            Sans Serif
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <input type="checkbox" value="display" id="display" />
+            Display
+            </label>
+          </li>
+          <li>
+            <label for="handwriting">
+              <input type="checkbox" value="handwriting" id="handwriting" />
+            Handwriting
+            </label>
+          </li>
+          <li>
+            <label for="monospace">
+              <input type="checkbox" value="monospace" id="monospace" />
+            Monospace
+            </label>
+          </li>
+        </ul>
+
+        <input type="submit" value="Apply font selections">
+    </div>
+
+    <div class="feature-selector">
+
+      <h2>Selected Font</h2>
+
+      <div class="font-info">
+        <span class="font-name">Abril Fatface</span>
+        <span class="font-weight">200</span>
+        <span class="font-style">normal</span>
+      </div>
+
+      <div class="features">
+
+        <h2>Open Type features available</h2>
+
+        <ul class="features">
+          <li>
+            <label class="feature">
+              <input type="checkbox" name="aalt">Access All Alternates
+            </label>
+          </li>
+          <li>
+            <label class="feature">
+            <input type="checkbox" name="c2sc">Small Capitals From  Capitals
+          </li>
+            </label>
+          <li>
+            <label class="feature">
+              <input type="checkbox" name="case">Case-Sensitive Forms
+            </label>
+          </li>
+          <li>
+            <label class="feature">
+            <input type="checkbox" name="ccmp">Glyph Composition /  Decomposition
+          </li>
+            </label>
+          <li>
+            <label class="feature">
+              <input type="checkbox" name="dnom">Denominators
+            </label>
+          </li>
+          <li>
+            <label class="feature">
+              <input type="checkbox" name="frac">Fractions
+            </label>
+          </li>
+          <li>
+            <label class="feature">
+              <input type="checkbox" name="liga">Standard Ligatures
+            </label>
+          </li>
+        </ul>
+
+      </div>
+
+      <input type="submit" value="Apply Open Type feature selections">
+    </div>
+
+    <div class="previewer">
+      <div class="preview" id="preview" contenteditable>
+      <p class="font-name"></p>
+      <p>The quick brown fox jumps over the lazy dog.</p>
+      <p>Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+      <p>The glass is 1/2 full.</p>
+      <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+      0123456789</p>
+      <p>AA AE AO AU AV AY IJ OE OO TZ Th aa ae ao au av ay ct eT et ff ffi ffj ffl fh fi fj fl fs ft ij oe oo ss st tz ue ui</p>
+      </div>
+    </div>
+
+  </div>
+
+  </form>
+
+  </body>
+</html>
